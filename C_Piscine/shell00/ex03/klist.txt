@@ -1,0 +1,5 @@
+Credentials cache: API:2D9D2961-AA9F-4FF6-A0D5-FE6009464BAF
+        Principal: bcosford@42ADEL.ORG.AU
+
+  Issued                Expires               Principal
+Nov 23 13:58:32 2021  Nov 23 23:58:32 2021  krbtgt/42ADEL.ORG.AU@42ADEL.ORG.AU
