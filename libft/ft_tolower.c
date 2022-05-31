@@ -6,7 +6,7 @@
 /*   By: bcosford <bcosford@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 16:22:50 by bcosford          #+#    #+#             */
-/*   Updated: 2022/05/11 17:15:33 by bcosford         ###   ########.fr       */
+/*   Updated: 2022/05/26 15:04:59 by bcosford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,8 @@
 int	ft_tolower(int c)
 
 {
-	unsigned char	charup;
-	unsigned char	charlo;
-
-	charup = c;
-	if ((c > 64) && (c < 91))
-	{
-		charlo = (charup + 32);
-		return ((unsigned char)charlo);
-	}
-	return ((unsigned char)charup);
+	if (c > 64 && c < 91)
+		return (c + 32);
+	else
+		return (c);
 }

@@ -6,7 +6,7 @@
 /*   By: bcosford <bcosford@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:03:07 by bcosford          #+#    #+#             */
-/*   Updated: 2022/05/18 11:34:58 by bcosford         ###   ########.fr       */
+/*   Updated: 2022/05/27 16:03:23 by bcosford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_putchar_fd(char c, int fd)
 
 {
-	write(fd, &c, fd);
+	write(fd, &c, 1);
 }

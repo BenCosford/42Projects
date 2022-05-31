@@ -6,12 +6,11 @@
 /*   By: bcosford <bcosford@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/18 11:43:07 by bcosford          #+#    #+#             */
-/*   Updated: 2022/05/18 11:43:58 by bcosford         ###   ########.fr       */
+/*   Updated: 2022/05/27 16:03:11 by bcosford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 
@@ -21,7 +20,7 @@ void	ft_putstr_fd(char *s, int fd)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		write(fd, &s[i], fd);
+		write(fd, &s[i], 1);
 		i++;
 	}
 }

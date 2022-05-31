@@ -6,37 +6,38 @@
 /*   By: bcosford <bcosford@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 12:53:26 by bcosford          #+#    #+#             */
-/*   Updated: 2022/05/16 15:52:29 by bcosford         ###   ########.fr       */
+/*   Updated: 2022/05/27 17:10:58 by bcosford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 
 {
 	char	*newstr;
 	size_t	i;
-	size_t	j;
+	size_t	len1;
+	size_t	len2;
 
-	i = 0;
-	j = 0;
-	if (!s1 && !s2)
-		return (NULL);
-	newstr = (char *)malloc(sizeof(char) * (sizeof(s1) + sizeof(s2) - 1));
-	if (!newstr)
-		return (NULL);
-	while (s1[i])
+	if ((char *)s1 && (char *)s2)
 	{
-		newstr[i] = s1[i];
-			i++;
+		len1 = ft_strlen(s1);
+		len2 = ft_strlen(s2);
+		newstr = (char *)malloc((len1 + len2 + 1) * sizeof(char));
+		if (!newstr)
+			return (NULL);
+		i = -1;
+		while (s1[++i])
+			newstr[i] = s1[i];
+		i = -1;
+		while (s2[++i])
+		{
+			newstr[len1] = s2[i];
+				len1++;
+		}
+		newstr[len1] = '\0';
+		return (newstr);
 	}
-	while (s2[j])
-	{
-		newstr[i + j] = s2[j];
-			j++;
-	}
-	newstr[i + j] += '\0';
-	return (newstr);
+	return (NULL);
 }

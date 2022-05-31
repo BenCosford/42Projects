@@ -6,7 +6,7 @@
 /*   By: bcosford <bcosford@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/09 16:23:01 by bcosford          #+#    #+#             */
-/*   Updated: 2022/05/11 17:11:59 by bcosford         ###   ########.fr       */
+/*   Updated: 2022/05/26 13:58:37 by bcosford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,8 @@
 int	ft_toupper(int c)
 
 {
-	unsigned char	charup;
-	unsigned char	charlo;
-
-	charlo = c;
-	if ((c > 96) && (c < 123))
-	{
-		charup = (charlo - 32);
-		return ((unsigned char)charup);
-	}
-	return ((unsigned char)charlo);
+	if (c > 96 && c < 123)
+		return (c - 32);
+	else
+		return (c);
 }
