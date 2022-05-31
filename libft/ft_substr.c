@@ -6,43 +6,36 @@
 /*   By: bcosford <bcosford@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/13 16:17:10 by bcosford          #+#    #+#             */
-/*   Updated: 2022/05/18 13:11:03 by bcosford         ###   ########.fr       */
+/*   Updated: 2022/05/26 16:05:03 by bcosford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <unistd.h>
 
 char	*ft_substr(const char *s, unsigned int start, size_t len)
-
 {
 	char			*sub;
 	size_t			i;
-	char			*str;
+	size_t			s_len;
 
-	i = 0;
-	str = (char *)s;
-	sub = malloc(len + 1);
+	if (!s)
+		return (NULL);
+	s_len = ft_strlen(s);
+	if (len > s_len)
+		sub = (char *)malloc(sizeof(char) * (s_len + 1));
+	else
+		sub = (char *)malloc(sizeof(char) * (len + 1));
 	if (!sub)
 		return (NULL);
-	if (start >= ft_strlen(str))
-		return (sub);
-	while (i < len)
+	i = 0;
+	if (start < (unsigned int)s_len)
 	{
-		sub[i] = s[i + start];
-		i++;
+		while (s[start + i] && i < len)
+		{
+			sub[i] = s[start + i];
+			i++;
+		}
 	}
-	sub[i + start] = (0);
+	sub[i] = '\0';
 	return (sub);
 }
-
-/*
-#include <stdio.h>
-
-int main()
-{
-	char *new;
-	new = ft_substr("make new array", 6, 4);
-	printf("%s\n", new);
-	return (0);
-}*/

@@ -6,15 +6,13 @@
 /*   By: bcosford <bcosford@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 16:12:07 by bcosford          #+#    #+#             */
-/*   Updated: 2022/05/18 10:50:52 by bcosford         ###   ########.fr       */
+/*   Updated: 2022/05/26 16:04:35 by bcosford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
 int	find_set(char c, char const *set)
-
 
 {
 	size_t	i;

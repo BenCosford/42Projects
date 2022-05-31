@@ -6,7 +6,7 @@
 #    By: bcosford <bcosford@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/09 16:23:08 by bcosford          #+#    #+#              #
-#    Updated: 2022/05/25 11:21:45 by bcosford         ###   ########.fr        #
+#    Updated: 2022/05/27 16:04:04 by bcosford         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,11 +70,11 @@ SRCS = $(SRC_CHAR) \
 	   $(SRC_STR)
 
 
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:%.c=%.o)
 
 BONUS_SRCS = 
 
-BONUS_OBJS = $(BONUS_SRCS:.c=.o)
+BONUS_OBJS = $(BONUS_SRCS:%.c=%.o)
 
 all: $(NAME)
 

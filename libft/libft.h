@@ -6,15 +6,15 @@
 /*   By: bcosford <bcosford@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 12:51:28 by bcosford          #+#    #+#             */
-/*   Updated: 2022/05/25 11:21:00 by bcosford         ###   ########.fr       */
+/*   Updated: 2022/05/26 15:56:46 by bcosford         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include "stdlib.h"
-# include "unistd.h" 
+# include <stdlib.h>
+# include <unistd.h> 
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
